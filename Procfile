@@ -1,1 +1,1 @@
-worker: python nestlebot_2020.py
+web: python nestlebot_2020.py
