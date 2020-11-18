@@ -21,10 +21,10 @@ Here are the steps I have in mind:
 
 3) Compose a tweet. Combine the image with, I dunno,
 
-  V1) some generic text ("Nestle is terrible. This is a Nestle product. Don't buy it. Thanks.")
+  * V1) some generic text ("Nestle is terrible. This is a Nestle product. Don't buy it. Thanks.")
 
-  V2) some hard-coded information about that product 
+  * V2) some hard-coded information about that product 
 
-  V3) some freshly extracted information about Nestle (recent news articles shared on anti-Nestle websites, such as (/r/FuckNestle)[http://www.reddit.com/r/FuckNestle].
+  * V3) some freshly extracted information about Nestle (recent news articles shared on anti-Nestle websites, such as (/r/FuckNestle)[http://www.reddit.com/r/FuckNestle].
 
 4) Tweet the tweet
