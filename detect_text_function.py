@@ -17,7 +17,19 @@ import argparse
 import time
 import cv2
 
-def detect_text(path_to_image): 
+def detect_text(path_to_image):
+    
+    '''
+    Input: path_to_image (file path to image, e.g. "images/spoopy.jpg")
+    Output: boolean ('True' if text was detected in image)
+    Sample usage:
+    
+    path_to_image="images/spoopy.jpg"
+    detect_text(path_to_image)
+    
+    source code for EAST text detection strats: https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
+    '''
+    
     
     # construct the argument parser and parse the arguments
     ap = argparse.ArgumentParser()
@@ -33,6 +45,12 @@ def detect_text(path_to_image):
     orig = image.copy()
     (H, W) = image.shape[:2]
     
+    # set the new width and height and then determine the ratio in change
+    # for both the width and height
+    (newW, newH) = (args["width"], args["height"])
+    rW = W / float(newW)
+    rH = H / float(newH)
+
     # resize the image and grab the new image dimensions
     image = cv2.resize(image, (newW, newH))
     (H, W) = image.shape[:2]
@@ -43,7 +61,6 @@ def detect_text(path_to_image):
     layerNames = ["feature_fusion/Conv_7/Sigmoid","feature_fusion/concat_3"]
     
     # load the pre-trained EAST text detector
-    print("[INFO] loading EAST text detector...")
     net = cv2.dnn.readNet(args["east"])
     
     # construct a blob from the image and then perform a forward pass of
