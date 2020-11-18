@@ -2,15 +2,16 @@ import tweepy
 import os
 import time
 import random
+import sys
+from os import environ
 
 def main():
     
     # get twitter auth creds
-    CONSUMER_KEY=os.getenv("TWITTER_CONSUMER_KEY")
-    CONSUMER_SECRET=os.getenv("TWITTER_CONSUMER_SECRET")
-    ACCESS_TOKEN=os.getenv("TWITTER_ACCESS_TOKEN")
-    ACCESS_TOKEN_SECRET=os.getenv("TWITTER_ACCESS_TOKEN_SECRET")
-    BEARER_TOKEN=os.getenv("BEARER_TOKEN")
+    CONSUMER_KEY = environ["TWITTER_CONSUMER_KEY"]
+    CONSUMER_SECRET = environ["TWITTER_CONSUMER_SECRET"]
+    ACCESS_TOKEN = environ["TWITTER_ACCESS_TOKEN"]
+    ACCESS_TOKEN_SECRET = environ["TWITTER_ACCESS_TOKEN_SECRET"]
     
     # set tweeting time interval
     #INTERVAL = 60 * 60 * 1  # tweet every 1 hour (prod)
