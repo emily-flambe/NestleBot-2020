@@ -58,7 +58,6 @@ json5==0.9.5
 jsonref==0.2
 jsonschema==3.2.0
 libcst==0.3.13
-load==0.0.0
 lxml==4.6.1
 MarkupSafe==1.1.1
 mechanize==0.4.5
