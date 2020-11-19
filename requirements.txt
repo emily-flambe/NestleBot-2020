@@ -1,4 +1,5 @@
 Google-Images-Search==1.3.4
 imutils==0.5.3
 numpy==1.19.1
+opencv-python==4.4.0.46
 tweepy==3.9.0
