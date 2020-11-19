@@ -5,7 +5,7 @@ import time
 import random
 import sys
 from google_images_search import GoogleImagesSearch
-import detect_text_function as dtf #lol
+#import detect_text_function as dtf #lol
 
 def main():
     
@@ -17,7 +17,7 @@ def main():
     
     # set tweeting time interval
     #INTERVAL = 60 * 60 * 1  # tweet every 1 hour (prod)
-    INTERVAL = 15  # every 15 seconds, for testing
+    INTERVAL = 30  # every 15 seconds, for testing
 
     # Authenticate to Twitter
     auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
