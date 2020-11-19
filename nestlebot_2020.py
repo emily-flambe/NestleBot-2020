@@ -5,7 +5,7 @@ import time
 import random
 import sys
 from google_images_search import GoogleImagesSearch
-#import detect_text_function as dtf #lol
+import detect_text_function as dtf #lol
 
 def main():
     
