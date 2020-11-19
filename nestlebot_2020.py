@@ -1,9 +1,11 @@
 import tweepy
 import os
+from os import environ
 import time
 import random
 import sys
-from os import environ
+from google_images_search import GoogleImagesSearch
+import detect_text_function as dtf #lol
 
 def main():
     
