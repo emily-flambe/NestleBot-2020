@@ -31,9 +31,19 @@ Here are the steps I have in mind:
 
 4) Tweet the tweet
 
+
 ### The pipfile
 
+Gotta run these bits to build the pipfile with the stuff you need to SUCCEED.
+
+### The pipfile
+
+Gotta run these bits to build the pipfile with the stuff you need to SUCCEED.
+
 `pipenv install tweepy`
+
 `pipenv install numpy`
+
 `pipenv install imutils`
+
 `pipenv install opencv-contrib-python`
