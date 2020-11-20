@@ -1,3 +1,15 @@
+'''
+Input: path_to_image (file path to image, e.g. "images/spoopy.jpg")
+Output: boolean ('True' if text was detected in image)
+Sample usage:
+
+path_to_image="images/spoopy.jpg"
+detect_text_from_image(path_to_image)
+
+source code for EAST text detection strats: https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
+'''
+    
+
 # import packages
 from imutils.object_detection import non_max_suppression
 import numpy as np
@@ -5,19 +17,18 @@ import argparse
 import time
 import cv2
 
-
-def detect_text(path_to_image):
+def detect_text_from_image(path_to_image):
     
+    '''
+    Input: path_to_image (file path to image, e.g. "images/spoopy.jpg")
+    Output: boolean ('True' if text was detected in image)
+    Sample usage:
     
-    #Input: path_to_image (file path to image, e.g. "images/spoopy.jpg")
-    #Output: boolean ('True' if text was detected in image)
-    #Sample usage:
-    #
-    #path_to_image="images/spoopy.jpg"
-    #detect_text(path_to_image)
-    #
-    #source code for EAST text detection strats: https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
+    path_to_image="images/spoopy.jpg"
+    detect_text(path_to_image)
     
+    source code for EAST text detection strats: https://www.pyimagesearch.com/2018/08/20/opencv-text-detection-east-text-detector/
+    '''
     
     
     # construct the argument parser and parse the arguments
@@ -114,24 +125,5 @@ def detect_text(path_to_image):
     # boxes
     boxes = non_max_suppression(np.array(rects), probs=confidences)
     
-    #return boolean True if "boxes" contains anything (ie. text was detected in the image)
+    #return boolean (True if "boxes" contains anything, ie. text was detected in the image)
     return len(boxes)>0
-    
-    
-def main():
-    
-    print("it's running wow")
-    
-    #this is a photo of me with my favorite chicken. Her name is Spoopy. I love her. She is not text.
-    spoopy_pic="images/spoopy.jpg"
-    spoopy_result = detect_text(spoopy_pic)
-    print(f"Does {spoopy_pic} contain text? {result}")
-    
-    #this is a photo of a can of Carnation - a deity in the pantheon of horrible Nestle products. It has text.
-    carnation_pic="images/nestle_carnation.jpg"
-    carnation_result = detect_text(carnation_pic)
-    print(f"Does {carnation_pic} contain text? {result}")
-
-if __name__ == "__main__":
-    main()
-    
