@@ -4,10 +4,10 @@ from os import environ
 import time
 import random
 import sys
-#from google_images_search import GoogleImagesSearch
-#from imutils.object_detection import non_max_suppression
+from google_images_search import GoogleImagesSearch
+from imutils.object_detection import non_max_suppression
 import cv2
-#import detect_text_function as dtf #lol
+import detect_text_function as dtf #lol
 
 def main():
     
