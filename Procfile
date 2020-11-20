@@ -1,2 +1,2 @@
 worker: python nestlebot_2020.py
-worker: python text_detect.py
+worker2: python text_detect.py
