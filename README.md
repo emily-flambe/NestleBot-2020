@@ -30,3 +30,10 @@ Here are the steps I have in mind:
   * V3) some freshly extracted information about Nestle (recent news articles shared on anti-Nestle websites, such as [/r/FuckNestle](http://www.reddit.com/r/FuckNestle).
 
 4) Tweet the tweet
+
+### The pipfile
+
+`pipenv install tweepy`
+`pipenv install numpy`
+`pipenv install imutils`
+`pipenv install opencv-contrib-python`
