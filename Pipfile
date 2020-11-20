@@ -7,7 +7,7 @@ name = "pypi"
 imutils = "*"
 google-images-search = "*"
 tweepy = "*"
-opencv-contrib-python = "*"
+opencv-contrib-python = "==4.2.0.34"
 
 [dev-packages]
 
