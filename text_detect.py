@@ -123,9 +123,14 @@ def main():
     print("it's running wow")
     
     #this is a photo of me with my favorite chicken. Her name is Spoopy. I love her. She is not text.
-    path_to_image="images/spoopy.jpg"
-    result = detect_text(path_to_image)
-    print(f"Does {path_to_image} contain text? {result}")
+    spoopy_pic="images/spoopy.jpg"
+    spoopy_result = detect_text(spoopy_pic)
+    print(f"Does {spoopy_pic} contain text? {result}")
+    
+    #this is a photo of a can of Carnation - a deity in the pantheon of horrible Nestle products. It has text.
+    carnation_pic="images/nestle_carnation.jpg"
+    carnation_result = detect_text(carnation_pic)
+    print(f"Does {carnation_pic} contain text? {result}")
 
 if __name__ == "__main__":
     main()
