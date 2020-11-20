@@ -3,10 +3,7 @@ from imutils.object_detection import non_max_suppression
 import numpy as np
 import argparse
 import time
-import cv
-
-
-'''
+import cv2
 
 
 def detect_text(path_to_image):
@@ -119,19 +116,17 @@ def detect_text(path_to_image):
     
     #return boolean True if "boxes" contains anything (ie. text was detected in the image)
     return len(boxes)>0
-'''
     
     
 def main():
     
     print("it's running wow")
     
-    '''
     #this is a photo of me with my favorite chicken. Her name is Spoopy. I love her. She is not text.
     path_to_image="images/spoopy.jpg"
     result = detect_text(path_to_image)
     print(f"Does {path_to_image} contain text? {result}")
-    '''
+
 if __name__ == "__main__":
     main()
     
