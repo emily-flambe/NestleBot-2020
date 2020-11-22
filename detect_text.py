@@ -17,7 +17,7 @@ import argparse
 import time
 import cv2
 
-def detect_text_from_image(path_to_image):
+def detect_text(path_to_image):
     
     '''
     Input: path_to_image (file path to image, e.g. "images/spoopy.jpg")

@@ -12,6 +12,13 @@ I am ambiguously employed right now, so I am making a Twitter bot to ***tweet ab
 
 [Nestle is evil](https://www.reddit.com/r/FuckNestle/comments/hmv0nv/the_reasons_why_we_hate_nestle_so_much/) and this Twitter bot will be the viral internet tour de force that takes it down, probably.
 
+### Future directions in NestleBot science
+
+This bot doesn't HAVE to tweet only about Nestle - there are lots of brands people might consider boycotting!
+
+Charles Stover already made a page that makes it easy to look up whether a product is owned by a brand/company that you might consider hating for one reason or another: https://charlesstover.github.io/peoplecott/ (or here is the [repo itself](https://github.com/CharlesStover/peoplecott)).
+
+NestleBot could use the [underlying data](https://github.com/CharlesStover/peoplecott/tree/master/src/constants) to tweet not only about Nestle, but about products from other brands as well! Stover's dataset only includes Nestle for now, but it appears set up to [accommodate multiple companies](https://github.com/CharlesStover/peoplecott/blob/master/src/constants/entities.ts) and multiple reasons to detest any of them.
 
 ### Tweet Generation
 
@@ -40,10 +47,13 @@ Tweet types:
 
 Bot is hosted on Heroku and will compose + send a tweet every hour.
 
+<<<<<<< Updated upstream
 #### Heroku requirements
 
 Gotta run these bits to build the pipfile with the stuff you need to SUCCEED.
 
+=======
+>>>>>>> Stashed changes
 `pipenv install tweepy`
 
 `pipenv install numpy`
