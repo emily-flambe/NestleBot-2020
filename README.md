@@ -17,13 +17,6 @@ I am ambiguously employed right now, so I am making a Twitter bot to ***tweet ab
 
 TBD lmao
 
-### Future directions in NestleBot science
-
-This bot doesn't HAVE to tweet only about Nestle - there are lots of brands people might consider boycotting!
-
-Charles Stover already made a page that makes it easy to look up whether a product is owned by a brand/company that you might consider hating for one reason or another: https://charlesstover.github.io/peoplecott/ (or here is the [repo itself](https://github.com/CharlesStover/peoplecott)).
-
-NestleBot could use the [underlying data](https://github.com/CharlesStover/peoplecott/tree/master/src/constants) to tweet not only about Nestle, but about products from other brands as well! Stover's dataset only includes Nestle for now, but it appears set up to [accommodate multiple companies](https://github.com/CharlesStover/peoplecott/blob/master/src/constants/entities.ts) and multiple reasons to detest any of them.
 
 
 ## Deployment on Heroku
