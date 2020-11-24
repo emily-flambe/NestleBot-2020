@@ -1,14 +1,6 @@
-import tweepy
-import os
-from os import environ
+from nestlebot_functions import *
+
 import time
-import random
-import sys
-from google_images_search import GoogleImagesSearch
-from imutils.object_detection import non_max_suppression
-import cv2
-from detect_text import detect_text
-from get_twitter_api import get_twitter_api
 
 def main():
     
@@ -21,19 +13,26 @@ def main():
     
     while True:
         
-        randint=random.randint(1,1000000)
-        print(f"time to tweet! beep boop boop {randint} have a great day")
+        print("Time to tweet - LFG")
         
-        #this is a photo of me with my favorite chicken. Her name is Spoopy. I love her. She is not text.
-        spoopy_pic="images/spoopy.jpg"
-        spoopy_result = detect_text(spoopy_pic)
-        print(f"Does {spoopy_pic} contain text? {spoopy_result}")
-    
-        # tweet the tweet
-        api.update_status(f"beep boop boop {randint} have a great day oh and by the way {spoopy_result}")
+        #get the freshest list of brands
+        brand_list = get_brands()
         
-        print("Tweeted, sleeping again...")
-        #sleep for 10 seconds
+        try:
+            #get the image we're gonna tweet
+            tweet_image_path, item = get_image(brand_list)
+            
+            #create and post the tweet
+            generate_tweet(tweet_image_path, item, api)
+            
+            print("Tweeted!!! Back to sleep...")
+        
+        except:
+            print("Tweet failed, RIP. Back to sleep...")
+            raise
+            pass
+        
+        #back to sleep zzzzzz
         time.sleep(INTERVAL)
 
 if __name__ == "__main__":
