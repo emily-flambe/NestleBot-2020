@@ -8,8 +8,8 @@ def main():
     api = get_twitter_api()
     
     # set tweeting time interval
-    #INTERVAL = 60 * 60 * 1  # tweet every 1 hour (prod)
-    INTERVAL = 30  # every 30 seconds, for testing
+    INTERVAL = 60 * 60 * 1  # tweet every 1 hour (prod)
+    #INTERVAL = 30  # every 30 seconds, for testing
     
     while True:
         
