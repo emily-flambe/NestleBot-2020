@@ -5,12 +5,18 @@ import random
 
 def main():
     
+    
     print("getting Twitter API")
     api = get_twitter_api()
     
-    randint = random.randint(1,1000)
-    tweet = f"Test tweet #{randint}"
-    post_result = api.update_status(status=tweet)
+    while True:
+        
+        print("attempting to Tweet")
+        randint = random.randint(1,1000)
+        tweet = f"Test tweet #{randint}"
+        post_result = api.update_status(status=tweet)
+        print("tweet success")
+        time.sleep(10)
 
 
 if __name__ == "__main__":
