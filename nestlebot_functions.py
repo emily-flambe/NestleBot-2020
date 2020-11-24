@@ -298,9 +298,14 @@ def generate_tweet(tweet_image_path, item, api):
     media = api.media_upload(tweet_image_path)
     
     # Post tweet with image
+    
     print("Tweeting!")
-    randint = random.randint(1,1000)
-    tweet = f"Have you heard about {item}? It's a bullshit product by the bullshit company Nestle. Reminder #{randint} not to purchase this. Thanksx"
-    post_result = api.update_status(status=tweet, media_ids=[media.media_id])
+    try:
+        tweet = f"Have you heard about {item}? It's a bullshit product by the bullshit company Nestle. Do not purchase this. #BoycottNestle"
+        post_result = api.update_status(status=tweet, media_ids=[media.media_id])
+    except:
+        randint = random.randint(1,1000)
+        tweet = f"Have you heard about {item}? It's a bullshit product by the bullshit company Nestle. Do not purchase this. #BoycottNestle {randint}"
+        post_result = api.update_status(status=tweet, media_ids=[media.media_id])
 
     
