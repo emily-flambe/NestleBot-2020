@@ -64,7 +64,7 @@ def google_image_search(search_term, num_images):
         ,'num': num_images
         ,'imgType': 'photo'
         ,'fileType': 'jpg'
-        ,'imgSize': 'MEDIUM',
+        ,'imgSize': 'LARGE',
     }
         
     #create or empty target directory (where we will be saving images from Google Image Search)
